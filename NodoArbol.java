@@ -21,7 +21,7 @@ public class NodoArbol {
 
     @Override
     public String toString() {
-        return "Su dato es: " + dato;
+        return " " + dato;
     }
 
     public int getDato() {

@@ -26,13 +26,14 @@ public class ejecutor {
         int eleccion;
         boolean salir = false;
         while(salir != true){
-            System.out.println("Elija lo que desea hacer:"
+            System.out.println("\nElija lo que desea hacer:"
                     + "\n1. Añadir un nuevo nodo"
                     + "\n2. Mostrar si está vacío"
                     + "\n3. Ordenar en orden"
                     + "\n4. Ordenar en pre orden"
                     + "\n5. Ordenar en post orden"
-                    + "\n6. Salir");
+                    + "\n6. Imprimir en orden vertical"
+                    + "\n7. Salir");
             eleccion = sc.nextInt();
         
         switch(eleccion){
@@ -62,7 +63,14 @@ public class ejecutor {
                 System.out.println("El árbol está vacío");
             }
             break;
-            case 6: salir = true;
+            //es este
+            case 6: if(!arbol.estaVacia()){
+                arbol.printVerticalOrder(arbol.raiz);
+            }else{
+                System.out.println("El árbol está vacío");
+            }
+            break;
+            case 7: salir = true;
             break;
         }
         }
